@@ -39,7 +39,23 @@
       text-decoration: none;
     }
     ul li {
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
+    }
+    /* New styles for the two-column layout */
+    .two-column-container {
+      display: flex;
+      gap: 3em;
+      margin-bottom: 2em;
+    }
+    .column {
+      flex: 1; /* Each column takes up equal space */
+    }
+    .column h2 {
+      margin-top: 0;
+    }
+    .column ul {
+      padding-left: 20px;
+      margin-top: 0;
     }
   </style>
 </head>
@@ -51,7 +67,7 @@
       <h1>Thomas Walker</h1>
       <p>PhD Candidate in 3D Vision and Neural Graphics<br>
          University of Edinburgh & Generative AI Laboratory (GAIL)<br>
-         EMAIL: T[DOT]M[DOT]WALKER[AT]ED.AC.UK<br>
+         T[DOT]M[DOT]WALKER[AT]ED.AC.UK<br>
          <a href="https://scholar.google.com/citations?user=i2K_5SQAAAAJ&hl=en">Google Scholar</a> |
          <a href="https://github.com/tom-m-walker">GitHub</a> |
          <a href="https://www.linkedin.com/in/thomas-walker97/">LinkedIn</a>
@@ -60,14 +76,43 @@
   </div>
 
   <h2>About Me</h2>
-  <p>I am a third-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). My journey into AI began after completing an MSci in Mathematics and Physics at Durham University, which gave me a strong foundation in formal geometry. This led me to pursue an MSc in Artificial Intelligence at Edinburgh before starting my PhD. My expertise now spans differentiable rendering, 3D reconstruction, and geometric deep learning, and my current research focuses on equipping world models with temporally stable 3D scene representations. I am always open to discussing new ideas and potential collaborations, so please feel free to reach out!</p>
+  <p>I am a third-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). With a formal background in geometry and first-author publications at top-tier conferences, my expertise spans differentiable rendering, 3D reconstruction, and geometric deep learning. My current research focuses on equipping world models with temporally stable 3D scene representations.</p>
+
+  <div class="two-column-container">
+    <div class="column">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>3D Scene Representation</li>
+        <li>Differentiable Rendering</li>
+        <li>3D Reconstruction</li>
+        <li>Geometric Deep Learning</li>
+        <li>Neural Graphics</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>PhD, 3D Vision</strong><br>University of Edinburgh, 2022-2026</li>
+        <li><strong>MSc, Artificial Intelligence</strong> (Distinction)<br>University of Edinburgh, 2021-2022</li>
+        <li><strong>MSci, Maths & Physics</strong> (First-Class)<br>University of Durham, 2016-2020</li>
+      </ul>
+    </div>
+  </div>
 
   <h2>Selected Publications</h2>
   <ul>
-    <li><strong>CrossSDF: Reconstruction Of Thin Structures From Cross Sections</strong>, <strong>Thomas Walker</strong>, Salvatore Esposito, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[PDF]</a></li>
-    <li><strong>Spatially Adaptive Hash Encodings For Neural Surface Reconstruction</strong>, <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>WACV</em>, 2025. <a href="https://arxiv.org/abs/2412.05179">[PDF]</a></li>
-    <li><strong>Explicit Neural Surfaces: Learning Continuous Geometry With Deformation Fields</strong>, <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>NeurIPS NeurReps Workshop</em>, 2023. <a href="https://arxiv.org/abs/2306.02956">[PDF]</a></li>
-    <li><strong>Spherical Feature Pyramid Networks</strong>, <strong>Thomas Walker</strong>, Varun Anand, Pavlos Andreadis. <em>arXiv</em>, 2023. <a href="https://arxiv.org/abs/2307.02658">[PDF]</a></li>
+    <li><strong>CrossSDF: Reconstruction Of Thin Structures From Cross Sections</strong><br>
+        <strong>Thomas Walker</strong>, Salvatore Esposito, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[PDF]</a>
+    </li>
+    <li><strong>Spatially Adaptive Hash Encodings For Neural Surface Reconstruction</strong><br>
+        <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>WACV</em>, 2025. <a href="https://arxiv.org/abs/2412.05179">[PDF]</a>
+    </li>
+    <li><strong>Explicit Neural Surfaces: Learning Continuous Geometry With Deformation Fields</strong><br>
+        <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>NeurIPS NeurReps Workshop</em>, 2023. <a href="https://arxiv.org/abs/2306.02956">[PDF]</a>
+    </li>
+    <li><strong>Spherical Feature Pyramid Networks</strong><br>
+        <strong>Thomas Walker</strong>, Varun Anand, Pavlos Andreadis. <em>arXiv</em>, 2023. <a href="https://arxiv.org/abs/2307.02658">[PDF]</a>
+    </li>
   </ul>
 
 </body>
