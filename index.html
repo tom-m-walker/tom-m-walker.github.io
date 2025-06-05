@@ -12,9 +12,24 @@
       padding: 0 1em;
       line-height: 1.6;
     }
-    img {
+    .header-container {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      margin-bottom: 2em;
+    }
+    .header-container img {
       max-width: 150px;
+      height: 150px;
       border-radius: 75px;
+      flex-shrink: 0;
+    }
+    .details h1 {
+      margin-top: 0;
+      margin-bottom: 0.25em;
+    }
+    .details p {
+      margin: 0;
     }
     h1, h2 {
       color: #333;
@@ -30,17 +45,24 @@
 </head>
 <body>
 
+  <!-- 
+    TODO: 
+    1. Replace 'yourphoto.jpg' with the actual path to your photo.
+  -->
 
-
-  <h1>Thomas Walker</h1>
-  <p><strong>Title:</strong> PhD Candidate in 3D Vision and Neural Graphics<br>
-     <strong>Email:</strong> T[DOT]M[DOT]WALKER[AT]ED.AC.UK<br>
-     <strong>Affiliation:</strong> University of Edinburgh & Generative AI Laboratory (GAIL)<br>
-     <a href="https://scholar.google.com/citations?user=i2K_5SQAAAAJ&hl=en">Google Scholar</a> |
-     <a href="https://github.com/tom-m-walker">GitHub</a> |
-     <a href="https://www.linkedin.com/in/thomas-walker97/">LinkedIn</a>
-  </p>
-  <img src="mug2.jpeg" alt="Photo of Thomas Walker">
+  <div class="header-container">
+    <img src="yourphoto.jpg" alt="Photo of Thomas Walker">
+    <div class="details">
+      <h1>Thomas Walker</h1>
+      <p>PhD Candidate in 3D Vision and Neural Graphics<br>
+         University of Edinburgh & Generative AI Laboratory (GAIL)<br>
+         T[DOT]M[DOT]WALKER[AT]ED.AC.UK<br>
+         <a href="https://scholar.google.com/citations?user=i2K_5SQAAAAJ&hl=en">Google Scholar</a> |
+         <a href="https://github.com/tom-m-walker">GitHub</a> |
+         <a href="https://www.linkedin.com/in/thomas-walker97/">LinkedIn</a>
+      </p>
+    </div>
+  </div>
 
   <h2>About Me</h2>
   <p>I am a third-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). With a formal background in geometry and first-author publications at top-tier conferences, my expertise spans differentiable rendering, 3D reconstruction, and geometric deep learning. My current research focuses on equipping world models with temporally stable 3D scene representations.</p>
