@@ -38,9 +38,6 @@
       color: #0645AD;
       text-decoration: none;
     }
-    ul li {
-      margin-bottom: 1em;
-    }
     /* New styles for the two-column layout */
     .two-column-container {
       display: flex;
@@ -48,7 +45,7 @@
       margin-bottom: 2em;
     }
     .column {
-      flex: 1; /* Each column takes up equal space */
+      flex: 1;
     }
     .column h2 {
       margin-top: 0;
@@ -56,6 +53,31 @@
     .column ul {
       padding-left: 20px;
       margin-top: 0;
+      list-style-position: outside;
+    }
+    .column ul li {
+       margin-bottom: 0.5em;
+    }
+
+    /* --- Styles for Publication List with Thumbnails --- */
+    .publications-list {
+      list-style-type: none; /* Remove default list bullets */
+      padding: 0;
+    }
+    .publication-item {
+      display: flex;
+      align-items: flex-start; /* Aligns image top with text top */
+      gap: 1.5em; /* Space between thumbnail and text */
+      margin-bottom: 2em; /* Space between each publication entry */
+    }
+    .publication-item img {
+      width: 160px; /* Adjust width as needed */
+      height: auto;
+      flex-shrink: 0;
+      border: 1px solid #eee; /* Optional: adds a light border */
+    }
+    .publication-info {
+      flex: 1; /* Allows text to take remaining space */
     }
   </style>
 </head>
@@ -75,7 +97,7 @@
     </div>
   </div>
 
-  <h2></h2>
+  <h2>About Me</h2>
   <p>Hello! I am a third-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). My research spans differentiable rendering, 3D reconstruction, and 3D generative models.  Before starting my PhD I studied Mathematics and Physics at the University of Durham, with a focus on the geometrical aspects of gauge field theories. Following this, I became fascinated by geometric deep learning, and came to the University Of Edinburgh to read Artifical Intelligence. Since then I've largely worked towards developing 3D reconstruction, from images and medical scanners such as CT/MRI. My current research focuses on equipping generative world models with temporally stable 3D scene representations.</p>
   <p> I am currently looking for both collaborators and internships, so feel free to reach out!</p>
 
@@ -101,18 +123,39 @@
   </div>
 
   <h2>Selected Publications</h2>
-  <ul>
-    <li><strong>CrossSDF: Reconstruction Of Thin Structures From Cross Sections</strong><br>
+  <!-- 
+    TODO: 
+    Replace the placeholder image paths (e.g., 'crosssdf_thumb.jpg') 
+    with the actual paths to your thumbnail images.
+  -->
+  <ul class="publications-list">
+    <li class="publication-item">
+      <img src="crosssdf_thumb.jpg" alt="Thumbnail for CrossSDF paper">
+      <div class="publication-info">
+        <strong>CrossSDF: Reconstruction Of Thin Structures From Cross Sections</strong><br>
         <strong>Thomas Walker</strong>, Salvatore Esposito, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[PDF]</a>
+      </div>
     </li>
-    <li><strong>Spatially Adaptive Hash Encodings For Neural Surface Reconstruction</strong><br>
+    <li class="publication-item">
+      <img src="hash_thumb.jpg" alt="Thumbnail for Spatially Adaptive Hash Encodings paper">
+      <div class="publication-info">
+        <strong>Spatially Adaptive Hash Encodings For Neural Surface Reconstruction</strong><br>
         <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>WACV</em>, 2025. <a href="https://arxiv.org/abs/2412.05179">[PDF]</a>
+      </div>
     </li>
-    <li><strong>Explicit Neural Surfaces: Learning Continuous Geometry With Deformation Fields</strong><br>
+    <li class="publication-item">
+      <img src="ens_thumb.jpg" alt="Thumbnail for Explicit Neural Surfaces paper">
+      <div class="publication-info">
+        <strong>Explicit Neural Surfaces: Learning Continuous Geometry With Deformation Fields</strong><br>
         <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>NeurIPS NeurReps Workshop</em>, 2023. <a href="https://arxiv.org/abs/2306.02956">[PDF]</a>
+      </div>
     </li>
-    <li><strong>Spherical Feature Pyramid Networks</strong><br>
+    <li class="publication-item">
+      <img src="sfpn_thumb.jpg" alt="Thumbnail for Spherical Feature Pyramid Networks paper">
+      <div class="publication-info">
+        <strong>Spherical Feature Pyramid Networks</strong><br>
         <strong>Thomas Walker</strong>, Varun Anand, Pavlos Andreadis. <em>arXiv</em>, 2023. <a href="https://arxiv.org/abs/2307.02658">[PDF]</a>
+      </div>
     </li>
   </ul>
 
