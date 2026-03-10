@@ -79,6 +79,18 @@
     .publication-info {
       flex: 1; /* Allows text to take remaining space */
     }
+    .video-crop {
+      width: 160px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid #eee;
+    }
+    .video-crop video {
+      display: block;
+      width: 200%; /* scale up 2x to compensate for 50% horizontal crop */
+      margin-left: -50%; /* center horizontally: shift left by half the excess */
+      margin-top: -20%; /* crop 20% from the top */
+    }
   </style>
 </head>
 <body>
@@ -98,18 +110,17 @@
   </div>
 
   <h2>About Me</h2>
-  <p>Hello! I am a third-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). My research spans differentiable rendering, 3D reconstruction, and 3D generative models.  Before starting my PhD I studied Mathematics and Physics at the University of Durham, with a focus on the geometrical aspects of gauge field theories. Following this, I became fascinated by geometric deep learning, and came to the University Of Edinburgh to read Artifical Intelligence. Since then I've largely worked towards developing 3D reconstruction, from images and medical scanners such as CT/MRI. My current research focuses on equipping generative world models with persistent spatial memory.</p>
+  <p>Hello! I am a final-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). My research interests are in world modeling, geometric deep learning, differentiable rendering, and scene understanding. Before starting my PhD I studied Mathematics and Physics at the University of Durham, with a focus on the geometrical aspects of gauge field theories. Following this, I became fascinated by geometric deep learning, and came to the University Of Edinburgh to read Artifical Intelligence. Since then my work was on differentiable rendering, 3D reconstruction and now generative world modeling.</p>
   <p> I am currently looking for both collaborators and internships, so feel free to reach out!</p>
 
   <div class="two-column-container">
     <div class="column">
       <h2>Research Interests</h2>
       <ul>
-        <li>3D Scene Representations</li>
-        <li>Differentiable Rendering</li>
-        <li>3D Reconstruction</li>
+        <li>World Modeling</li>
         <li>Geometric Deep Learning</li>
-        <li>World Modelling</li>
+        <li>Differentiable Rendering</li>
+        <li>Scene Understanding</li>
       </ul>
     </div>
     <div class="column">
@@ -130,10 +141,30 @@
   -->
   <ul class="publications-list">
     <li class="publication-item">
+      <div class="video-crop">
+        <video autoplay loop muted playsinline>
+          <source src="persist_thumb.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="publication-info">
+        <strong>PERSIST: World Models with Persistent 3D State</strong><br>
+        <strong>Thomas Walker*</strong>, Samuel Garcin*, Steven McDonagh, Tim Pearce, Hakan Bilen, Kaixin Wang, Tianyu He, Jiang Bian. <em>ICML (Under Review)</em>, 2026. <a href="https://francelico.github.io/persist.github.io/">[Website]</a><br>
+        <small>*Equal Contribution</small>
+      </div>
+    </li>
+    <li class="publication-item">
+      <img src="semantic_foams_thumbnail.png" alt="Thumbnail for Semantic Foam paper">
+      <div class="publication-info">
+        <strong>Semantic Foam: Unifying Spatial and Semantic Scene Decomposition</strong><br>
+        Amr Sharafeldin, Aryan Mikaeili, <strong>Thomas Walker</strong>, Shrisudhan Govindarajan, Daniel Rebain, Kwang Moo Yi, Andrea Tagliasacchi. <em>CVPR</em>, 2026.
+      </div>
+    </li>
+    <li class="publication-item">
       <img src="crosssdf_thumb.jpg" alt="Thumbnail for CrossSDF paper">
       <div class="publication-info">
         <strong>CrossSDF: Reconstruction Of Thin Structures From Cross Sections</strong><br>
-        <strong>Thomas Walker</strong>, Salvatore Esposito, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[PDF]</a>
+        <strong>Thomas Walker*</strong>, Salvatore Esposito*, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[PDF]</a><br>
+        <small>*Equal Contribution</small>
       </div>
     </li>
     <li class="publication-item">
