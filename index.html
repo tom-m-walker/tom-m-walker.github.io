@@ -70,26 +70,16 @@
       gap: 1.5em; /* Space between thumbnail and text */
       margin-bottom: 2em; /* Space between each publication entry */
     }
-    .publication-item img {
-      width: 160px; /* Adjust width as needed */
-      height: auto;
+    .publication-item img,
+    .publication-item video {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
       flex-shrink: 0;
-      border: 1px solid #eee; /* Optional: adds a light border */
+      background: #fff;
     }
     .publication-info {
       flex: 1; /* Allows text to take remaining space */
-    }
-    .video-crop {
-      width: 160px;
-      overflow: hidden;
-      flex-shrink: 0;
-      border: 1px solid #eee;
-    }
-    .video-crop video {
-      display: block;
-      width: 200%; /* scale up 2x to compensate for 50% horizontal crop */
-      margin-left: -50%; /* center horizontally: shift left by half the excess */
-      margin-top: -20%; /* crop 20% from the top */
     }
   </style>
 </head>
@@ -101,26 +91,27 @@
       <h1>Thomas Walker</h1>
       <p>PhD Candidate in 3D Vision and Neural Graphics<br>
          University of Edinburgh & Generative AI Laboratory (GAIL)<br>
-         T[DOT]M[DOT]WALKER[AT]ED.AC.UK<br>
          <a href="https://scholar.google.com/citations?user=i2K_5SQAAAAJ&hl=en">Google Scholar</a> |
          <a href="https://github.com/tom-m-walker">GitHub</a> |
-         <a href="https://www.linkedin.com/in/thomas-walker97/">LinkedIn</a>
+         <a href="https://www.linkedin.com/in/thomas-walker97/">LinkedIn</a> |
+         <a href="CV.pdf">CV</a>
       </p>
     </div>
   </div>
 
   <h2>About Me</h2>
-  <p>Hello! I am a final-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). My research interests are in world modeling, geometric deep learning, differentiable rendering, and scene understanding. Before starting my PhD I studied Mathematics and Physics at the University of Durham, with a focus on the geometrical aspects of gauge field theories. Following this, I became fascinated by geometric deep learning, and came to the University Of Edinburgh to read Artifical Intelligence. Since then my work was on differentiable rendering, 3D reconstruction and now generative world modeling.</p>
-  <p> I am currently looking for both collaborators and internships, so feel free to reach out!</p>
+  <p>Hello! I am a final-year Ph.D. candidate at the University of Edinburgh and a researcher at the Generative AI Laboratory (GAIL). My current work focuses on world models, particularly improving the physical realism of generations through explicit representations of the environment. I have a formal background in mathematics and first-author publications at top-tier CV/ML conferences (CVPR, NeurIPS, WACV). I am currently interning at Huawei, developing 4D LiDAR generation models, with the internship concluding in March 2026.</p>
+  <p>I am currently looking for summer internships and full-time positions, so feel free to reach out!</p>
 
   <div class="two-column-container">
     <div class="column">
       <h2>Research Interests</h2>
       <ul>
         <li>World Modeling</li>
-        <li>Geometric Deep Learning</li>
+        <li>Diffusion Models</li>
         <li>Differentiable Rendering</li>
-        <li>Scene Understanding</li>
+        <li>Feedforward Reconstruction</li>
+        <li>Geometry Processing</li>
       </ul>
     </div>
     <div class="column">
@@ -134,58 +125,62 @@
   </div>
 
   <h2>Selected Publications</h2>
-  <!-- 
-    TODO: 
-    Replace the placeholder image paths (e.g., 'crosssdf_thumb.jpg') 
-    with the actual paths to your thumbnail images.
-  -->
   <ul class="publications-list">
     <li class="publication-item">
-      <div class="video-crop">
-        <video autoplay loop muted playsinline>
-          <source src="persist_thumb.mp4" type="video/mp4">
-        </video>
-      </div>
+      <video autoplay loop muted playsinline>
+        <source src="thumbs/persist_thumb.mp4" type="video/mp4">
+      </video>
       <div class="publication-info">
         <strong>PERSIST: World Models with Persistent 3D State</strong><br>
-        <strong>Thomas Walker*</strong>, Samuel Garcin*, Steven McDonagh, Tim Pearce, Hakan Bilen, Kaixin Wang, Tianyu He, Jiang Bian. <em>ICML (Under Review)</em>, 2026. <a href="https://francelico.github.io/persist.github.io/">[Website]</a><br>
+        <strong>Thomas Walker*</strong>, Samuel Garcin*, Steven McDonagh, Tim Pearce, Hakan Bilen, Kaixin Wang, Tianyu He, Jiang Bian. <em>ICML Submission</em>, 2026. <a href="https://francelico.github.io/persist.github.io/">[Website]</a><br>
         <small>*Equal Contribution</small>
       </div>
     </li>
     <li class="publication-item">
-      <img src="semantic_foams_thumbnail.png" alt="Thumbnail for Semantic Foam paper">
+      <img src="thumbs/semantic_foams_thumbnail.jpg" alt="Thumbnail for Semantic Foam paper">
       <div class="publication-info">
         <strong>Semantic Foam: Unifying Spatial and Semantic Scene Decomposition</strong><br>
         Amr Sharafeldin, Aryan Mikaeili, <strong>Thomas Walker</strong>, Shrisudhan Govindarajan, Daniel Rebain, Kwang Moo Yi, Andrea Tagliasacchi. <em>CVPR</em>, 2026.
       </div>
     </li>
     <li class="publication-item">
-      <img src="crosssdf_thumb.jpg" alt="Thumbnail for CrossSDF paper">
+      <video autoplay loop muted playsinline>
+        <source src="thumbs/dynaslice_thumb.mp4" type="video/mp4">
+      </video>
+      <div class="publication-info">
+        <strong>DynaSlice: Multi-Class 4D Reconstruction from Cross Sections</strong><br>
+        <strong>Thomas Walker</strong>, João Paulo Silva do Monte Lima, Diana Aldana Moreno, Oisín Nolan, Salvatore Esposito, Tiago Novello. <em>ECCV Submission</em>, 2026. <a href="DynaSlice_preprint.pdf">[Preprint]</a>
+      </div>
+    </li>
+    <li class="publication-item">
+      <img src="thumbs/crosssdf_thumb.jpg" alt="Thumbnail for CrossSDF paper">
       <div class="publication-info">
         <strong>CrossSDF: Reconstruction Of Thin Structures From Cross Sections</strong><br>
-        <strong>Thomas Walker*</strong>, Salvatore Esposito*, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[PDF]</a><br>
+        <strong>Thomas Walker*</strong>, Salvatore Esposito*, Daniel Rebain, Amir Vaxman, Arno Onken, Changjian Li, Oisin Mac Aodha. <em>CVPR</em>, 2025. <a href="https://arxiv.org/abs/2412.04120">[Arxiv]</a><br>
         <small>*Equal Contribution</small>
       </div>
     </li>
     <li class="publication-item">
-      <img src="hash_thumb.jpg" alt="Thumbnail for Spatially Adaptive Hash Encodings paper">
+      <img src="thumbs/hash_thumb2.jpg" alt="Thumbnail for Spatially Adaptive Hash Encodings paper">
       <div class="publication-info">
         <strong>Spatially Adaptive Hash Encodings For Neural Surface Reconstruction</strong><br>
-        <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>WACV</em>, 2025. <a href="https://arxiv.org/abs/2412.05179">[PDF]</a>
+        <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>WACV</em>, 2025. <a href="https://arxiv.org/abs/2412.05179">[Arxiv]</a>
       </div>
     </li>
     <li class="publication-item">
-      <img src="ens_thumb.png" alt="Thumbnail for Explicit Neural Surfaces paper">
+      <video autoplay loop muted playsinline>
+        <source src="thumbs/ens_thumb.mp4" type="video/mp4">
+      </video>
       <div class="publication-info">
         <strong>Explicit Neural Surfaces: Learning Continuous Geometry With Deformation Fields</strong><br>
-        <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>NeurIPS NeurReps Workshop</em>, 2023. <a href="https://arxiv.org/abs/2306.02956">[PDF]</a>
+        <strong>Thomas Walker</strong>, Octave Mariotti, Amir Vaxman, Hakan Bilen. <em>NeurIPS NeurReps Workshop</em>, 2023. <a href="https://arxiv.org/abs/2306.02956">[Arxiv]</a>
       </div>
     </li>
     <li class="publication-item">
-      <img src="sfpn_thumb.png" alt="Thumbnail for Spherical Feature Pyramid Networks paper">
+      <img src="thumbs/sfpn_thumb.jpg" alt="Thumbnail for Spherical Feature Pyramid Networks paper">
       <div class="publication-info">
         <strong>Spherical Feature Pyramid Networks</strong><br>
-        <strong>Thomas Walker</strong>, Varun Anand, Pavlos Andreadis. <em>arXiv</em>, 2023. <a href="https://arxiv.org/abs/2307.02658">[PDF]</a>
+        <strong>Thomas Walker</strong>, Varun Anand, Pavlos Andreadis. <em>arXiv</em>, 2023. <a href="https://arxiv.org/abs/2307.02658">[Arxiv]</a>
       </div>
     </li>
   </ul>
